@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="memGame.css">
+
+<script>
+//first function that will execute
+function init()
+		{
+			//check and see if the canvas element is supported in
+			//the current browser
+			//http://diveintohtml5.org/detect.html#canvas
+			if(!(!!document.createElement('canvas').getContext))
+			{
+				var wrapper = document.getElementById("canvasWrapper");
+				wrapper.innerHTML = "Your browser does not appear to support " +
+				"the HTML5 Canvas element";
+				return;
+			}else{
+				//hide the form and its elements;
+				main();
+			}
+}
+</script>
+
+<title>Memory HTML5 Game</title>
+</head>
+<body onload=init() background="images/mainbckg.jpg">
+<script type="text/javascript"></script>
+<script src="scripts/easeljs.js"></script>
+<script src="scripts/tweenjs.js"></script>
+<script src="scripts/SoundJS.js"></script>
+<script src="scripts/HTMLAudioPlugin.js"></script>
+<script src="scripts/preloadjs.js"></script>
+<script src="scripts/movieclip.js"></script>
+<script src="scripts/Main.js"></script>
+
+
+<div class="topheader" >
+<div style="padding-left:500px;">
+<a href="http://www.facebook.com/people/Vivek-Sharma/100004869813525"><img src="images/logo_facebook.png" alt="facebook logo"></a>
+<a href="https://twitter.com/blackarck"><img src="images/logo_twitter.png" alt="twitter logo"></a>
+</div>
+
+<div class="subheader"> </div>
+<div class="mainBody">
+
+ <canvas id="myCanvas" width="600" height="450"></canvas>
+</div>
+<div class="footer"> 
+<ul>
+<li><a href="https://sites.google.com/site/devilsjwork/about">About</a></li>
+<li><a href="https://sites.google.com/site/devilsjwork/html5">HTML5 Games</a></li>
+<li><a href="https://sites.google.com/site/devilsjwork/android-app">Android Games</a></li>
+<li><a href="https://sites.google.com/site/devilsjwork/java-applications">Desktop Games</a></li>
+<li><a href="https://sites.google.com/site/devilsjwork/about">Contact US</a></li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>
